@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            perspective: 800px;
+        }
+
+        .cube {
+            width: 200px;
+            height: 200px;
+            /* background-color: #bfa; */
+            margin: 100px auto;
+            /* 设置3d变形效果 */
+            transform-style: preserve-3d;
+            /* transform: rotateX(45deg) rotateZ(45deg); */
+            animation: rotate 10s infinite linear;
+            /* transform:rotateY(45deg) scaleZ(2); */
+        }
+
+        .cube p{
+          color: red;
+          font-size: 20px;
+          position: absolute;
+          top: 120px;
+          left: 20px;
+        }
+
+        .cube>div {
+            width: 200px;
+            height: 200px;
+            opacity: 0.4;
+            position: absolute;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .box1 {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        
+        .box8 {
+            transform: rotateY(90deg); 
+            border-radius: 50%;
+        } 
+
+        .box7{
+            border-radius: 50%;
+        }
+
+        .p1 {
+            transform: rotateY(90deg);
+        } 
+
+        .p2 {
+            transform: rotateY(90deg);
+        } 
+
+        .box2 {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .box3 {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .box4 {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        .box5 {
+            transform:rotateY(0deg) translateZ(100px);
+        }
+
+        .box6 {
+            transform: rotateY(180deg) translateZ(100px);
+        } 
+
+        @keyframes rotate {
+            form{
+                transform:rotateX(0) rotateZ(0);
+            }
+
+            to{
+                transform:rotateX(1turn) rotateZ(1turn);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="cube">
+        <p>宝宝，新年快乐！</p>
+        <p class="p1">宝宝，新年快乐！</p>
+        <div class="box1">
+            <img src="./1.jpg" />
+        </div>
+
+        <div class="box2">
+            <img src="./2.jpg" />
+        </div>
+
+        <div class="box3">
+            <img src="./3.jpg">
+        </div>
+
+        <div class="box4">
+            <img src="./4.jpg">
+        </div>
+
+        <div class="box5">
+            <img src="./5.jpg">
+        </div>
+
+        <div class="box6">
+            <img src="./6.jpg">
+        </div>
+        
+        <div class="box7" style="opacity: 1;">
+            <img style="width: 200px;height: 200px;border-radius: 50%;" src="./7.jpg">
+        </div>
+
+        <div class="box8" style="opacity: 1;">
+            <img style="width: 200px;height: 200px;border-radius: 50%;" src="./7.jpg">
+        </div>
+
+        <p>宝宝，新年快乐！</p>
+        <p class="p2">宝宝，新年快乐！</p>
+    </div>
+</body>
+
+</html>
